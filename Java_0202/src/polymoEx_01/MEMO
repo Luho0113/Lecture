@@ -1,0 +1,25 @@
+학교 성적 출력 프로그램
+
+<기본 설계>
+- 부모클래스 : 과목명, 점수, 중간고사, 기말고사, 수행평가
+- 자식클래스 : 초등학생, 중학생, 고등학생(extends 중학생)
+	- 초딩클래스 : 부모 클래스 그대로 상속
+	- 중딩클래스 : 부모 + 담당 교사, 출석 점수, 봉사 점수
+	- 고딩클래스 : 부모 + 표준 편차
+- 비즈니스 클래스 : 데이터 입력 받기, 점수 계산하기, 출력하기
+- 메인 클래스 : 비즈니스 클래스 호출, 시작 메뉴 화면, 비즈니스 클래스의 메소드 호출
+
+
+<상세 설계>
+- Score.java
+	- score; //점수
+	- private int midExam; //중간고사
+	- private int finalExam; //기말고사
+	- private int perEvalution; //수행평가
+- Elementary.java
+- Middle.java
+	- private String teacher; //담당교사명
+	- private int attendance; //출석점수
+	- private int volunteer; //봉사점수
+- High.java
+	- private double standardDevi; //표준편차
